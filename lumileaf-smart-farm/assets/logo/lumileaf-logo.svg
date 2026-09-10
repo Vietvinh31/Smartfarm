@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" role="img" aria-label="LumiLeaf">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B936D"/>
+      <stop offset="100%" stop-color="#1F5D42"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="36" font-family="Inter, sans-serif" font-weight="700" font-size="32" fill="#1F5D42">LUM</text>
+  <!-- Custom I as sprout -->
+  <g transform="translate(98, 4)">
+    <rect x="6" y="18" width="4" height="18" rx="2" fill="#1F5D42"/>
+    <path d="M8 18 Q8 8 16 4 Q8 6 8 12" fill="url(#leafGrad)"/>
+    <path d="M8 18 Q8 10 0 6 Q8 8 8 14" fill="url(#leafGrad)" opacity="0.85"/>
+  </g>
+  <text x="118" y="36" font-family="Inter, sans-serif" font-weight="700" font-size="32" fill="#1F5D42">LEAF</text>
+</svg>
