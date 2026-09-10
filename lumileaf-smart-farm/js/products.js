@@ -1,76 +1,76 @@
 /**
- * Ươm Xanh Smart Farm - Products Module
+ * Ươm Xanh – Nông nghiệp thông minh - Products Module
  */
 
 const PRODUCTS = [
   {
     id: 1,
-    name: 'Microgreen Mix',
+    name: 'Microgreens hỗn hợp',
     category: 'microgreens',
     tag: 'Microgreens',
     desc: 'Hỗn hợp microgreens đa dạng, giàu dinh dưỡng và hương vị tươi mát.',
-    image: 'assets/images/products/microgreen-mix.svg',
-    features: 'Hỗn hợp 5 loại microgreens organic',
+    image: 'assets/images/microgreens.webp',
+    features: 'Hỗn hợp các loại microgreens',
     flavor: 'Tươi mát, hơi cay nhẹ, giòn',
-    usage: 'Salad, sandwich, trang trí món ăn',
+    usage: 'Rau trộn, bánh mì, trang trí món ăn',
     cycle: '7–10 ngày'
   },
   {
     id: 2,
-    name: 'Red Radish Microgreens',
+    name: 'Microgreens cải củ đỏ',
     category: 'microgreens',
     tag: 'Microgreens',
     desc: 'Microgreens cải củ đỏ với màu sắc rực rỡ và vị cay đặc trưng.',
-    image: 'assets/images/products/microgreen-radish.svg',
-    features: 'Màu tím-đỏ đậm, giàu anthocyanin',
+    image: 'assets/images/radish.webp',
+    features: 'Thân tím đỏ, lá xanh nhỏ',
     flavor: 'Cay nhẹ, giòn, tươi',
-    usage: 'Garnish, salad, smoothie bowl',
+    usage: 'Trang trí món ăn, rau trộn, sinh tố',
     cycle: '6–8 ngày'
   },
   {
     id: 3,
-    name: 'Broccoli Microgreens',
+    name: 'Microgreens bông cải',
     category: 'microgreens',
     tag: 'Microgreens',
-    desc: 'Chứa sulforaphane cao, được nuôi trong môi trường kiểm soát.',
-    image: 'assets/images/products/microgreen-broccoli.svg',
-    features: 'Giàu sulforaphane và vitamin C',
+    desc: 'Mầm bông cải xanh non, được nuôi trong môi trường kiểm soát.',
+    image: 'assets/images/broccoli.webp',
+    features: 'Thân mảnh, lá nhỏ xanh tươi',
     flavor: 'Nhẹ, hơi đắng, tươi',
-    usage: 'Salad, juice, món healthy',
+    usage: 'Rau trộn, nước ép, ăn kèm',
     cycle: '8–10 ngày'
   },
   {
     id: 4,
-    name: 'Green Kale',
+    name: 'Cải xoăn xanh',
     category: 'leafy',
-    tag: 'Leafy Greens',
+    tag: 'Rau ăn lá',
     desc: 'Cải xoăn xanh non, mềm và giàu chất xơ, vitamin K.',
-    image: 'assets/images/products/green-kale.svg',
+    image: 'assets/images/kale.webp',
     features: 'Lá non mềm, không sần',
     flavor: 'Đậm vị rau, hơi ngọt',
-    usage: 'Salad, smoothie, xào nhanh',
+    usage: 'Rau trộn, sinh tố, xào nhanh',
     cycle: '14–18 ngày'
   },
   {
     id: 5,
-    name: 'Butterhead Lettuce',
+    name: 'Xà lách búp bơ',
     category: 'leafy',
-    tag: 'Leafy Greens',
+    tag: 'Rau ăn lá',
     desc: 'Xà lách búp bơ mềm mại, giòn ngọt, thu hoạch theo ngày.',
-    image: 'assets/images/products/butterhead-lettuce.svg',
+    image: 'assets/images/hero/greenhouse.webp',
     features: 'Lá mềm, giòn, màu xanh tươi',
     flavor: 'Ngọt nhẹ, mát',
-    usage: 'Salad, cuốn, burger',
+    usage: 'Rau trộn, món cuốn, bánh mì',
     cycle: '21–28 ngày'
   },
   {
     id: 6,
-    name: 'Fresh Herb Mix',
+    name: 'Rau gia vị hỗn hợp',
     category: 'herbs',
-    tag: 'Herbs',
+    tag: 'Rau gia vị',
     desc: 'Hỗn hợp rau thơm tươi: húng quế, mùi tây, rau mùi.',
-    image: 'assets/images/products/herb-mix.svg',
-    features: '3 loại rau thơm organic',
+    image: 'assets/images/herbs.webp',
+    features: 'Húng quế, mùi tây và rau mùi',
     flavor: 'Thơm mạnh, tươi sáng',
     usage: 'Nấu ăn, trang trí, đồ uống',
     cycle: '10–14 ngày'
@@ -100,7 +100,7 @@ function renderProducts(grid, products) {
   grid.innerHTML = products.map(p => `
     <article class="product-card reveal" data-category="${p.category}">
       <div class="product-card__image">
-        <img src="${basePath}${p.image}" alt="${p.name} - Ươm Xanh Smart Farm" loading="lazy">
+        <img src="${basePath}${p.image}" alt="${p.name} - Ươm Xanh – Nông nghiệp thông minh" loading="lazy">
         <span class="product-card__tag">${p.tag}</span>
       </div>
       <div class="product-card__body">
@@ -122,8 +122,9 @@ function initFilter(filterBar) {
 
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
-      chips.forEach(c => c.classList.remove('is-active'));
+      chips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed', 'false'); });
       chip.classList.add('is-active');
+      chip.setAttribute('aria-pressed', 'true');
       const filter = chip.dataset.filter;
 
       document.querySelectorAll('.product-card').forEach(card => {

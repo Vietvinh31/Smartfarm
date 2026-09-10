@@ -1,152 +1,49 @@
-# Ươm Xanh Smart Farm
+# Ươm Xanh – Nông nghiệp thông minh
 
-Website frontend giới thiệu thương hiệu nông nghiệp thông minh — **Bài tập lớn môn Công nghệ đa phương tiện**.
+Website giới thiệu thương hiệu cho bài Công nghệ đa phương tiện của Nhóm 4. Giữ HTML, CSS và JavaScript ES Modules hiện có; không có backend hay kết nối IoT.
 
-## Mục tiêu
+## Chạy tại máy
 
-Xây dựng website multimedia hiện đại giới thiệu thương hiệu **ƯƠM XANH SMART FARM** — nông trại thông minh, rau sạch, microgreens. Website kết hợp:
+Từ thư mục này chạy `python -m http.server 5500 --bind 127.0.0.1`, sau đó mở http://127.0.0.1:5500. Không mở trực tiếp bằng file:// vì JavaScript dùng ES Modules.
 
-- Văn bản & Typography
-- Logo tùy chỉnh
-- Hình ảnh & Gallery
-- Animation & Scroll storytelling
-- Video + Audio + Subtitle (WebVTT)
-- Interaction (filter, modal, form, dashboard demo)
-- Responsive design
+## Giao diện và nội dung
 
-**Chỉ frontend** — không có backend, database hay API.
+- Sáu trang dùng chung `css/variables.css`, `css/fonts.css`, `css/brand.css` và các stylesheet thành phần hiện có.
+- Be Vietnam Pro được lưu tại `assets/fonts`, kèm giấy phép OFL; không cần tải Google Fonts khi xem trang.
+- Logo duy nhất đang được sử dụng: `assets/logo/two-leaves.svg`. SVG chỉ tạo khung hiển thị quanh ảnh PNG gốc người dùng cung cấp, không vẽ lại hình lá. Navbar, mobile menu, footer và favicon cùng dùng tệp này.
+- Các tệp logo cũ được giữ trong kho nguồn nhưng không được tham chiếu trong giao diện.
+- Trang chủ: hero, thanh điểm mạnh, giới thiệu, Smart Farm, ba sản phẩm, sáu bước hành trình, định hướng bền vững, video, sáu ảnh gallery, liên hệ và footer.
+- Bộ lọc, modal sản phẩm, mobile menu, lightbox, hiệu ứng xuất hiện và mô phỏng cảm biến dùng các module hiện có.
 
-## Công nghệ
+## Các mục cần nội dung thật
 
-- HTML5 (semantic)
-- CSS3 (variables, Grid, Flexbox)
-- JavaScript ES6+ (Vanilla, ES Modules)
-- Google Fonts: Be Vietnam Pro + Lora
+- Video thương hiệu chưa có: trang chủ hiển thị placeholder, không tải MP4 thiếu và không giả lập nút phát. Xem `assets/video/README.md`.
+- Form chỉ kiểm tra dữ liệu tại trình duyệt, không gửi hoặc lưu dữ liệu. Email và số điện thoại có liên kết thật.
+- Chưa có URL mạng xã hội: biểu tượng không gắn liên kết giả.
+- Dữ liệu môi trường và ảnh là minh họa; không có chứng nhận sản phẩm hay số liệu tiết kiệm tài nguyên được khẳng định.
 
-## Cấu trúc thư mục
+## Kiểm tra giao diện
 
-```
-lumileaf-smart-farm/
-├── index.html
-├── pages/
-│   ├── about.html
-│   ├── smart-farm.html
-│   ├── products.html
-│   ├── journey.html
-│   └── contact.html
-├── css/
-│   ├── reset.css
-│   ├── variables.css
-│   ├── style.css
-│   ├── animations.css
-│   └── responsive.css
-├── js/
-│   ├── main.js
-│   ├── navbar.js
-│   ├── animations.js
-│   ├── products.js
-│   └── contact.js
-├── assets/
-│   ├── images/ (hero, farm, products, journey, about, gallery)
-│   ├── video/
-│   ├── audio/
-│   ├── icons/
-│   └── logo/
-└── README.md
-```
+Đã kiểm tra bằng Edge/Playwright ở 1440, 1280, 1024, 768, 390 và 375 px trên cả sáu trang; kiểm tra asset, lỗi JavaScript, tràn ngang, menu, bộ lọc, modal, lightbox, demo Smart Farm và form. Chi tiết tại `AUDIT.md`.
 
-## Cách chạy project
+## Ảnh minh họa
 
-1. Mở thư mục `lumileaf-smart-farm` trong **VS Code**
-2. Cài extension **Live Server** (nếu chưa có)
-3. Click chuột phải vào `index.html` → **Open with Live Server**
-4. Website chạy tại `http://127.0.0.1:5500/` (hoặc port tương tự)
+Ảnh được tạo bằng công cụ imagegen tích hợp, sau đó chuyển WebP để giảm dung lượng. Đây không phải ảnh chụp nông trại thật. Logo không được tạo bằng AI.
 
-> **Lưu ý:** Phải dùng Live Server (hoặc local server) vì JavaScript dùng ES Modules (`import/export`).
+Các tệp cuối nằm tại `assets/images/`: `hero/greenhouse.webp`, `microgreens.webp`, `radish.webp`, `broccoli.webp`, `herbs.webp`, `kale.webp`, `seedlings.webp`, `harvest.webp`, `led.webp`, `packaging.webp`, `table.webp`.
 
-## Danh sách multimedia assets cần thay
+Prompt chung: “Use case: photorealistic-natural. Illustrative photograph for a smart agriculture brand website. Bright soft morning daylight, fresh green and warm cream palette, clean premium editorial photography, landscape 4:3. No text, no logo, no watermark.”
 
-Hiện tại project dùng **SVG placeholder**. Bạn cần thay bằng nội dung thật:
+Chủ thể của từng prompt:
 
-### Hình ảnh (`assets/images/`)
-
-| File placeholder | Thay bằng | Gợi ý nội dung |
-|---|---|---|
-| `hero/hero-smart-farm.svg` | `hero-smart-farm.jpg` | Nông trại thông minh, microgreens |
-| `hero/hero-poster.svg` | `hero-poster.jpg` | Poster cho hero video |
-| `farm/farm-led.svg` | `farm-led.jpg` | Hệ thống LED chiếu sáng |
-| `farm/farm-sensors.svg` | `farm-sensors.jpg` | Cảm biến, dashboard |
-| `farm/farm-vertical.svg` | `farm-vertical.jpg` | Vertical farm |
-| `products/*.svg` | `*.jpg` | Ảnh sản phẩm thật (6 sản phẩm) |
-| `journey/*.svg` | `*.jpg` | 6 bước hành trình |
-| `about/*.svg` | `*.jpg` | Team, mission |
-| `gallery/gallery-*.svg` | `gallery-*.jpg` | 6 ảnh gallery |
-
-Sau khi thay, cập nhật đuôi file trong HTML/JS từ `.svg` sang `.jpg` hoặc `.webp`.
-
-### Video (`assets/video/`)
-
-| File | Mô tả |
-|---|---|
-| `hero-farm.mp4` | Video loop 8–12s cho hero background (muted, autoplay) |
-| `lumileaf-brand.mp4` | Video quảng cáo 20–30 giây (có audio/voice-over) |
-
-**Kịch bản video 30 giây:**
-
-| Thời gian | Hình ảnh | Voice-over |
-|---|---|---|
-| 0–4s | Hạt giống | "Every great harvest begins with a seed." |
-| 4–8s | Mầm cây | — |
-| 8–13s | Nước, ánh sáng, cảm biến | "Technology helps us understand what every plant needs." |
-| 13–18s | Nông trại thông minh | — |
-| 18–23s | Thu hoạch | "Less waste. Smarter growing. Fresher food." |
-| 23–27s | Đóng gói | — |
-| 27–30s | Logo Ươm Xanh | "Ươm Xanh. Ươm xanh bằng công nghệ." |
-
-### Subtitle
-
-| File | Mô tả |
-|---|---|
-| `lumileaf-vi.vtt` | Phụ đề tiếng Việt (đã có sẵn, có thể chỉnh theo video thật) |
-
-### Audio (tùy chọn)
-
-| File | Mô tả |
-|---|---|
-| `assets/audio/ambient-farm.mp3` | Nhạc nền nhẹ (nếu muốn thêm) |
-
-## Tính năng đã triển khai
-
-- [x] Navbar sticky + transparent → solid on scroll
-- [x] Mobile hamburger menu
-- [x] Hero 100vh với video background + poster fallback
-- [x] Counter animation (stats)
-- [x] Smart Farm dashboard demo (dữ liệu live giả lập)
-- [x] Journey timeline (horizontal desktop / vertical mobile)
-- [x] Product grid + filter + modal chi tiết
-- [x] Video player custom controls + subtitle toggle
-- [x] Gallery masonry grid
-- [x] Testimonial slider
-- [x] Contact form validation + toast
-- [x] Scroll reveal animations
-- [x] `prefers-reduced-motion` support
-- [x] Responsive 375px – 1440px
-- [x] SEO cơ bản + semantic HTML + accessibility
-
-## Luồng demo gợi ý (2–3 phút)
-
-1. **Hero** — Video background, slogan, CTA
-2. **Stats** — Counter animation khi scroll
-3. **Smart Farm** — Dashboard dữ liệu live demo
-4. **Products** — Filter + modal chi tiết
-5. **Journey** — Timeline storytelling
-6. **Video** — Phát video + bật/tắt subtitle
-7. **Contact** — Gửi form demo
-
-## Nhóm thực hiện
-
-Dự án học tập — Nhóm 04, Lớp 68M, Khoa CNTT, Trường ĐH Xây Dựng Hà Nội.
-
----
-
-**Ươm Xanh Smart Farm** — *Ươm xanh bằng công nghệ.*
+- greenhouse: lush butterhead lettuce in white hydroponic channels, clean greenhouse, green hills, gentle morning light.
+- microgreens: mixed radish and broccoli microgreens in a shallow tray, green leaves and delicate purple stems.
+- radish: red radish microgreens with purple stems and green cotyledons on a cream ceramic plate.
+- broccoli: dense young broccoli microgreens, pale green stems and tiny paired cotyledons, no purple stems.
+- herbs: basil, parsley and coriander on a light cream kitchen surface.
+- kale: curly green kale leaves on a cream natural surface.
+- seedlings: seeds beside emerging seedlings in coco coir plugs inside a bright greenhouse.
+- harvest: hands harvesting butterhead lettuce into a clean crate in a greenhouse, no faces.
+- led: bright vertical farm, shelves of microgreens, white LED lights and an unbranded sensor, no purple neon.
+- packaging: lettuce and microgreens being packed in unbranded kraft produce boxes.
+- table: green salad with microgreens in a cream ceramic bowl on a light dining table.

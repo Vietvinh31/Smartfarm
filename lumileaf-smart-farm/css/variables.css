@@ -1,36 +1,45 @@
 /* Ươm Xanh Smart Farm - Design Tokens */
 
 :root {
+  --green-dark: #176B43;
+  --green-main: #2C7A4B;
+  --green-fresh: #73A84F;
+  --green-light: #DDEBCF;
+  --background: #FBFCF7;
+  --text-main: #173F31;
+  /* Compatibility aliases used by the existing components. */
+  --surface: var(--background);
+  --cream-100: #F7F8F1;
+  --cream-300: #DDEBCF;
+  --sage-100: #EFF6E8;
+  --sage-200: #DDEBCF;
+  --green-400: #DDEBCF;
   /* New Design System Colors */
-  --green-900: #176B43; /* Primary dark green */
-  --green-800: #1A7A4C; /* Slight variation for hover */
-  --green-700: #176B43; /* Mapping existing vars to primary */
-  --green-600: #79B24A; /* Fresh green */
-  --green-500: #79B24A;
-  --green-400: #93C868;
+  --green-900: #173F31;
+  --green-800: #176B43;
+  --green-700: #176B43;
+  --green-600: #2C7A4B;
+  --green-500: #73A84F;
 
-  --sage-200: #DDECCF; /* Light green */
-  --sage-100: #DDECCF;
+  --green-soft: #EFF6E8;
+  --green-ultra-soft: #EFF6E8;
 
-  --cream-300: #EAEFDF;
-  --cream-200: #F5F8F0; /* Very light green / cream */
-  --cream-100: #FAFBF6;
-
-  --surface: #FAFBF6;
+  --cream: #F7F8F1;
+  --cream-light: #FBFCF7;
   --white: #FFFFFF;
 
-  --text-primary: #214333; /* Text dark */
-  --text-secondary: #5D7267; /* Text secondary */
-  --text-muted: #8A9D93;
+  --text-primary: #173F31;
+  --text-secondary: #5D7267;
+  --text-muted: #5D7267;
 
-  --border: rgba(33, 67, 51, 0.10); /* Border nhẹ */
+  --border: rgba(23,107,67,0.10);
 
-  --color-primary: var(--green-900);
+  --color-primary: var(--green-800);
   --color-dark: var(--green-900);
   --color-accent: var(--green-600);
-  --color-light-green: var(--sage-100);
-  --color-cream: var(--cream-100);
-  --color-background: var(--surface);
+  --color-light-green: var(--green-soft);
+  --color-cream: var(--cream);
+  --color-background: var(--cream-light);
   --color-text: var(--text-primary);
   --color-white: var(--white);
   --color-muted: var(--text-secondary);
@@ -38,7 +47,7 @@
 
   --font-heading: "Be Vietnam Pro", Arial, sans-serif;
   --font-body: "Be Vietnam Pro", Arial, sans-serif;
-  --font-accent: "Be Vietnam Pro", Arial, sans-serif; /* Unified typography */
+  --font-accent: "Lora", serif; /* Unified typography */
 
   --fs-xs: 0.875rem;
   --fs-sm: 0.875rem;

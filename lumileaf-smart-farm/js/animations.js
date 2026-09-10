@@ -354,6 +354,12 @@ export function initFarmSteps() {
   if (!steps.length || !preview) return;
 
   steps.forEach(step => {
+    step.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        step.click();
+      }
+    });
     step.addEventListener('click', () => {
       steps.forEach(s => s.classList.remove('is-active'));
       step.classList.add('is-active');

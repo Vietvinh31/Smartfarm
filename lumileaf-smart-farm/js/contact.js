@@ -9,8 +9,7 @@ export function initContactForm() {
     e.preventDefault();
     if (!validateForm(form)) return;
 
-    showToast('Cảm ơn bạn! Ươm Xanh đã nhận được thông tin.');
-    form.reset();
+    showToast('Thông tin hợp lệ. Biểu mẫu minh họa chưa gửi dữ liệu; vui lòng liên hệ nhom4@smartfarm.vn.');
     clearErrors(form);
   });
 

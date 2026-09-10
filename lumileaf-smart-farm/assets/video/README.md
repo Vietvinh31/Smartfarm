@@ -1,36 +1,22 @@
-# Video Assets
+# Video thương hiệu – TODO
 
-Thư mục này dành cho file video của project.
+Chưa có tệp video thật. Trang chủ giữ placeholder hình ảnh, không có nguồn MP4 gây 404 hoặc nút phát giả.
 
-## Cần thêm
+Khi có video:
 
-| File | Mô tả | Yêu cầu |
-|---|---|---|
-| `hero-farm.mp4` | Video loop cho hero background | 8–12 giây, muted, H.264, ~5–12 MB |
-| `lumileaf-brand.mp4` | Video quảng cáo thương hiệu | 20–30 giây, có audio/voice-over, H.264 |
+1. Thêm `uom-xanh-brand.mp4` (H.264 và âm thanh AAC) vào thư mục này.
+2. Thêm `uom-xanh-vi.vtt` có phụ đề tiếng Việt khớp nội dung và thời gian video. Tệp phụ đề cũ chỉ là bản nháp, không được coi là phụ đề đã kiểm chứng.
+3. Thay `.video-placeholder` tại `index.html` bằng trình phát:
 
-## Subtitle (đã có sẵn)
+```html
+<div class="video-player-wrap">
+  <video id="brand-video" controls preload="metadata" poster="assets/images/hero/greenhouse.webp">
+    <source src="assets/video/uom-xanh-brand.mp4" type="video/mp4">
+    <track kind="subtitles" src="assets/video/uom-xanh-vi.vtt" srclang="vi" label="Tiếng Việt" default>
+  </video>
+</div>
+```
 
-| File | Mô tả |
-|---|---|
-| `lumileaf-vi.vtt` | Phụ đề tiếng Việt cho video thương hiệu |
+Trình phát gốc hỗ trợ phát/dừng, âm lượng, tua, phụ đề và toàn màn hình theo trình duyệt. Logic trình phát tùy chỉnh cũ vẫn được giữ trong `js/animations.js` nếu cần dùng lại.
 
-## Kịch bản video 30 giây
-
-| Thời gian | Nội dung hình ảnh |
-|---|---|
-| 0–4s | Hạt giống |
-| 4–8s | Mầm cây phát triển |
-| 8–13s | Nước, ánh sáng, cảm biến |
-| 13–18s | Nông trại thông minh |
-| 18–23s | Thu hoạch |
-| 23–27s | Cảnh đóng gói |
-| 27–30s | Logo Ươm Xanh |
-
-**Voice-over gợi ý:**
-- "Every great harvest begins with a seed."
-- "Technology helps us understand what every plant needs."
-- "Less waste. Smarter growing."
-
-**Voice-over gợi ý phần kết:**
-- "Ươm Xanh. Ươm xanh bằng công nghệ."
+Gợi ý trình tự: hạt giống → nảy mầm → chăm sóc thông minh → thu hoạch → đóng gói → bàn ăn. Chỉ dùng logo hai chiếc lá đã được cung cấp và lời dẫn tiếng Việt.
