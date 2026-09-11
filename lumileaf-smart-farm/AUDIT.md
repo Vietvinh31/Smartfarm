@@ -1,23 +1,24 @@
-# Kiểm tra hoàn tất — 11/09/2026
+# Audit hoàn thiện — 11/09/2026
 
-Phạm vi: sáu trang HTML hiện có. Kiểm tra bằng Microsoft Edge headless qua Playwright trên Windows.
+Website giữ nguyên sáu route và nền tảng HTML/CSS/JS; không thêm framework hoặc backend.
 
-| Nội dung | Kết quả |
+| Yêu cầu | Kết quả |
 | --- | --- |
-| 1440, 1280, 1024, 768, 390, 375 px × 6 trang | Đạt 36/36; không phát hiện phần tử tràn ngang |
-| Ảnh và đường dẫn nội bộ | Không thiếu tệp, không có ảnh lỗi |
-| HTTP và JavaScript khi duyệt | Không có HTTP ≥400 hoặc lỗi pageerror trong lượt kiểm tra |
-| Navbar và mobile menu | Mở/đóng, Escape và liên kết trang hoạt động |
-| Bộ lọc sản phẩm | Tất cả 6; Microgreens 3; rau ăn lá 2; rau gia vị 1 |
-| Modal sản phẩm | Mở chi tiết và đóng bằng Escape hoạt động |
-| Gallery | Sáu ảnh; mở lightbox và đóng bằng Escape hoạt động |
-| Smart Farm | Chọn mục thay ảnh; số liệu ghi rõ là mô phỏng |
-| Form | Kiểm tra bắt buộc/email; giữ dữ liệu và báo rõ chưa gửi |
-| Font | Be Vietnam Pro tải từ project, gồm ký tự tiếng Việt và giấy phép OFL |
-| Logo | Cùng một ảnh hai lá gốc được dùng cho navbar/footer/mobile/favicon |
-| Nội dung | Không testimonial giả, không claim 90%, không dashboard quản trị |
-| Video | Placeholder và TODO; không yêu cầu MP4 chưa tồn tại |
+| Giới thiệu thương hiệu | Trang chủ, câu chuyện/sứ mệnh/tầm nhìn/giá trị, mô hình, sản phẩm, hành trình và liên hệ được giữ đồng bộ |
+| Logo và tiếng Việt | Chỉ tham chiếu logo lá gốc; tên thương hiệu là HTML; font Be Vietnam Pro local |
+| Ảnh riêng | 6 sản phẩm/6 ảnh; 6 gallery/6 ảnh; 6 bước hành trình/6 ảnh; 4 chủ đề Smart Farm/4 ảnh |
+| Ngoại lệ tái sử dụng hợp lý | Cùng sản phẩm ở trang chủ/danh mục/modal; ảnh lightbox và ảnh nguồn; ảnh hành trình trong video |
+| Ảnh động | SVG/CSS tưới tuần hoàn, có chuyển động thực; tạm dừng, dừng ngoài màn hình, reduced motion |
+| Video thật | 28 giây, 1280×720, H.264 + AAC, nhạc nền không lời; 8 cue tiếng Việt; poster và bản chữ |
+| Trình phát | Kiểm tra phát/dừng, thời gian tăng, seek 16,5 giây, unmuted volume 1, phụ đề tải đủ; native controls |
+| Sản phẩm | HTML tĩnh hiện cả khi tắt JS; bộ lọc 6/3/2/1; modal hoạt động, đóng trả focus |
+| Responsive | 375, 390, 768, 1024, 1280, 1440 px × 6 trang: 36/36 không overflow |
+| Asset và JavaScript | Toàn bộ ảnh có src được tải/decode; không HTTP >=400 hoặc pageerror trong lượt local |
+| Tương tác | Menu mobile/Escape, gallery lightbox, Smart Farm đổi ảnh, form validation đạt |
+| Thông tin liên hệ | 55 Giải Phóng, Bạch Mai, Hà Nội; nhom4@smartfarm.vn; 0375219286; copyright 2026 thống nhất |
 
-Đã xem ảnh chụp desktop, mobile và các trang con để kiểm tra bố cục. Ảnh tạo bằng AI chỉ phục vụ minh họa, không đại diện ảnh chụp nông trại thực tế. Chi tiết nguồn ảnh và prompt tại README.md.
+Bằng chứng: `docs/audit/local-final.json`, `interaction-extra.json`, `video-probe.json`, ảnh chụp home desktop/mobile, motion, gallery và video. Đã kiểm tra trực quan các ảnh mới trên contact sheet. `node --check` đạt cho các module JS sửa đổi.
 
-Giới hạn: chưa kiểm tra trên thiết bị iOS/Safari thật. Chưa có video nên chưa thể kiểm tra phát video/âm thanh/phụ đề bằng nội dung thật. Form không có backend; mạng xã hội chờ URL chính thức.
+Production: đã kiểm tra https://uomxanhsf.vercel.app, sáu route hoạt động, sản phẩm hiển thị. Bản live chưa có video; thay đổi lần này chưa được push/deploy. Báo cáo `docs/audit/production-before.json` là bản live, không phải xác nhận triển khai các thay đổi local.
+
+Giới hạn: chưa thử Safari/iOS hoặc thiết bị thật; toàn màn hình dựa trên khả năng trình duyệt. Form là demo kiểm tra dữ liệu, không gửi hoặc lưu dữ liệu. Video là montage ảnh có nhạc nền, không có lời đọc. Ảnh AI và số liệu Smart Farm được ghi rõ là minh họa. Nguồn ảnh và giấy phép tại `docs/MEDIA-SOURCES.md`.

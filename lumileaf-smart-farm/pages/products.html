@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sản phẩm Ươm Xanh - Microgreens, leafy greens và herbs tươi từ nông trại thông minh.">
+  <meta name="description" content="Sản phẩm Ươm Xanh - Microgreens, rau ăn lá và rau gia vị tươi từ nông trại thông minh.">
   <title>Sản phẩm | Ươm Xanh – Nông nghiệp thông minh</title>
   <link rel="icon" href="../assets/logo/two-leaves.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/fonts.css">
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/responsive.css">
   <link rel="stylesheet" href="../css/brand.css">
+  <link rel="stylesheet" href="../css/multimedia.css">
 </head>
 <body>
 
@@ -64,7 +65,6 @@
 
   <main>
     <section class="page-hero">
-      <div class="page-hero__bg"><img src="../assets/images/microgreens.webp" alt=""></div>
       <div class="page-hero__overlay"></div>
       <div class="container page-hero__content">
         <p class="page-hero__breadcrumb"><a href="../index.html">Trang chủ</a> / Sản phẩm</p>
@@ -87,7 +87,12 @@
           <button class="filter-chip" data-filter="herbs" aria-pressed="false">Rau gia vị</button>
         </div>
 
-        <div class="products-grid reveal" data-render="true" data-base-path="../"></div>
+        <p class="products-count" aria-live="polite">6 sản phẩm</p><div class="products-grid" data-base-path="../"><article class="product-card" data-category="microgreens"><div class="product-card__image"><img src="../assets/images/microgreens.webp" alt="Microgreens hỗn hợp" loading="lazy"><span class="product-card__tag">Microgreens</span></div><div class="product-card__body"><h3 class="product-card__title">Microgreens hỗn hợp</h3><p class="product-card__desc">Hỗn hợp microgreens đa dạng, giàu dinh dưỡng và hương vị tươi mát.</p><button class="btn btn--secondary product-card__btn" data-product-id="1">Xem chi tiết</button></div></article>
+<article class="product-card" data-category="microgreens"><div class="product-card__image"><img src="../assets/images/radish.webp" alt="Microgreens cải củ đỏ" loading="lazy"><span class="product-card__tag">Microgreens</span></div><div class="product-card__body"><h3 class="product-card__title">Microgreens cải củ đỏ</h3><p class="product-card__desc">Microgreens cải củ đỏ với màu sắc rực rỡ và vị cay đặc trưng.</p><button class="btn btn--secondary product-card__btn" data-product-id="2">Xem chi tiết</button></div></article>
+<article class="product-card" data-category="microgreens"><div class="product-card__image"><img src="../assets/images/broccoli.webp" alt="Microgreens bông cải" loading="lazy"><span class="product-card__tag">Microgreens</span></div><div class="product-card__body"><h3 class="product-card__title">Microgreens bông cải</h3><p class="product-card__desc">Mầm bông cải xanh non, được nuôi trong môi trường kiểm soát.</p><button class="btn btn--secondary product-card__btn" data-product-id="3">Xem chi tiết</button></div></article>
+<article class="product-card" data-category="leafy"><div class="product-card__image"><img src="../assets/images/kale.webp" alt="Cải xoăn xanh" loading="lazy"><span class="product-card__tag">Rau ăn lá</span></div><div class="product-card__body"><h3 class="product-card__title">Cải xoăn xanh</h3><p class="product-card__desc">Cải xoăn xanh non, mềm và giàu chất xơ, vitamin K.</p><button class="btn btn--secondary product-card__btn" data-product-id="4">Xem chi tiết</button></div></article>
+<article class="product-card" data-category="leafy"><div class="product-card__image"><img src="../assets/images/lettuce-product.webp" alt="Xà lách búp bơ" loading="lazy"><span class="product-card__tag">Rau ăn lá</span></div><div class="product-card__body"><h3 class="product-card__title">Xà lách búp bơ</h3><p class="product-card__desc">Xà lách búp bơ mềm mại, giòn ngọt, thu hoạch theo ngày.</p><button class="btn btn--secondary product-card__btn" data-product-id="5">Xem chi tiết</button></div></article>
+<article class="product-card" data-category="herbs"><div class="product-card__image"><img src="../assets/images/herbs.webp" alt="Rau gia vị hỗn hợp" loading="lazy"><span class="product-card__tag">Rau gia vị</span></div><div class="product-card__body"><h3 class="product-card__title">Rau gia vị hỗn hợp</h3><p class="product-card__desc">Hỗn hợp rau thơm tươi: húng quế, mùi tây, rau mùi.</p><button class="btn btn--secondary product-card__btn" data-product-id="6">Xem chi tiết</button></div></article></div>
       </div>
     </section>
   </main>
@@ -144,7 +149,7 @@
     <div class="modal__content">
       <button class="modal__close" aria-label="Đóng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
       <div class="product-modal__layout">
-        <div class="product-modal__image"><img src="" alt=""></div>
+        <div class="product-modal__image"><img alt=""></div>
         <div class="product-modal__info">
           <span class="product-modal__tag"></span>
           <h2 class="product-modal__title" id="product-modal-title"></h2>

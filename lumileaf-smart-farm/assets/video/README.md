@@ -1,22 +1,7 @@
-# Video thương hiệu – TODO
+# Video thương hiệu Ươm Xanh
 
-Chưa có tệp video thật. Trang chủ giữ placeholder hình ảnh, không có nguồn MP4 gây 404 hoặc nút phát giả.
+`uom-xanh-brand.mp4`: 28 giây, 1280×720, 25 fps, H.264/yuv420p + AAC, faststart, khoảng 2,65 MB. Video dựng từ ảnh minh họa có chuyển động chậm; nhạc nền không lời tự tổng hợp, không có lời đọc.
 
-Khi có video:
+`uom-xanh-vi.vtt`: 8 đoạn phụ đề khớp 8 cảnh. `uom-xanh-poster.webp`: poster với logo lá gốc và chữ thương hiệu HTML. Native controls hỗ trợ phát/dừng, tua, âm lượng, phụ đề và toàn màn hình theo trình duyệt. Nội dung chữ đầy đủ có trong details ngay dưới video.
 
-1. Thêm `uom-xanh-brand.mp4` (H.264 và âm thanh AAC) vào thư mục này.
-2. Thêm `uom-xanh-vi.vtt` có phụ đề tiếng Việt khớp nội dung và thời gian video. Tệp phụ đề cũ chỉ là bản nháp, không được coi là phụ đề đã kiểm chứng.
-3. Thay `.video-placeholder` tại `index.html` bằng trình phát:
-
-```html
-<div class="video-player-wrap">
-  <video id="brand-video" controls preload="metadata" poster="assets/images/hero/greenhouse.webp">
-    <source src="assets/video/uom-xanh-brand.mp4" type="video/mp4">
-    <track kind="subtitles" src="assets/video/uom-xanh-vi.vtt" srclang="vi" label="Tiếng Việt" default>
-  </video>
-</div>
-```
-
-Trình phát gốc hỗ trợ phát/dừng, âm lượng, tua, phụ đề và toàn màn hình theo trình duyệt. Logic trình phát tùy chỉnh cũ vẫn được giữ trong `js/animations.js` nếu cần dùng lại.
-
-Gợi ý trình tự: hạt giống → nảy mầm → chăm sóc thông minh → thu hoạch → đóng gói → bàn ăn. Chỉ dùng logo hai chiếc lá đã được cung cấp và lời dẫn tiếng Việt.
+Tái tạo: chạy `node tools/film-titles.cjs` khi server local cổng 5500 đang chạy, sau đó `python tools/build-film.py` (cần FFmpeg trên PATH). Công cụ tiêu đề dùng Playwright/Sharp hiện có trên máy phát triển; chúng không được tải vào website. Nhạc nền được tạo bằng Python stdlib, không cần dịch vụ ngoài. `tools/film-work` là tệp trung gian có thể xóa sau khi xuất. Báo cáo codec/thời lượng tại `docs/audit/video-probe.json`.

@@ -1,0 +1,56 @@
+/* The irrigation visual is an illustration, never an alternative brand mark. */
+.motion-farm { border: 1px solid var(--border); border-radius: 24px; overflow: hidden; background: var(--green-soft); }
+.motion-farm svg { width: 100%; height: auto; }
+.motion-farm__caption { padding: 16px 24px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.motion-farm__caption p { font-size: .8rem; color: var(--text-secondary); }
+.motion-farm__caption button { font-size: .76rem; text-decoration: underline; text-underline-offset: 4px; min-height: 40px; }
+.motion-farm .water-flow { stroke-dasharray: 8 14; animation: irrigation-flow 2s linear infinite; }
+.motion-farm .water-drop { animation: irrigation-drop 2.6s ease-in infinite; transform-box: fill-box; transform-origin: center; }
+.motion-farm .water-drop:nth-of-type(2) { animation-delay: .8s; }
+.motion-farm .water-drop:nth-of-type(3) { animation-delay: 1.6s; }
+.motion-farm .plant-leaves { transform-origin: 50% 100%; transform-box: fill-box; animation: plant-breathe 5s ease-in-out infinite; }
+.motion-farm .sensor-ring { transform-box: fill-box; transform-origin: center; animation: sensor-signal 3s ease-out infinite; }
+.motion-farm .lamp-glow { animation: lamp-light 4s ease-in-out infinite; }
+.motion-farm.is-paused *, .motion-farm.is-offscreen * { animation-play-state: paused !important; }
+@keyframes irrigation-flow { to { stroke-dashoffset: -44; } }
+@keyframes irrigation-drop { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: .85; } 90%,100% { transform: translateY(55px); opacity: 0; } }
+@keyframes plant-breathe { 50% { transform: rotate(3deg) scale(1.035); } }
+@keyframes sensor-signal { 0% { transform: scale(.85); opacity: .55; } 100% { transform: scale(1.6); opacity: 0; } }
+@keyframes lamp-light { 50% { opacity: .35; } }
+.video-player-wrap { max-width: 1040px; margin-inline: auto; background: #173f31; }
+.video-player-wrap video { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain; }
+.video-player-wrap video::cue { color: white; background: rgba(12,34,24,.86); font-family: 'Be Vietnam Pro', sans-serif; }
+.film-meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin: 16px auto 0; max-width: 1040px; font-size: .82rem; color: var(--text-secondary); }
+.film-meta a { color: var(--green-dark); text-decoration: underline; text-underline-offset: 3px; }
+.film-transcript { max-width: 1040px; margin: 20px auto 0; padding: 18px 22px; border: 1px solid var(--border); border-radius: 16px; font-size: .9rem; }
+.film-transcript summary { cursor: pointer; font-weight: 600; }
+.film-transcript p { margin-top: 12px; color: var(--text-secondary); }
+.film-error { padding: 16px; background: var(--green-soft); color: var(--text-main); }
+.media-credit { margin: 18px auto 0; text-align: center; font-size: .76rem; color: var(--text-secondary); }
+.media-credit a { text-decoration: underline; }
+.cta-banner--plain { background: var(--green-dark); }
+.cta-banner--plain .cta-banner__overlay { display: none; }
+.journey-step__image svg { width: 40px; height: 40px; color: var(--green-main); margin-inline: auto; }
+.journey-step__image:has(svg) { display: grid; place-items: center; height: 72px; background: var(--green-light); border-radius: 16px; width: 100%; }
+.farm-step { text-align: left; width: 100%; }
+.farm-step[aria-pressed="true"] { border-color: var(--green-main); background: var(--green-soft); }
+.farm-preview__caption { padding: 12px 16px; background: var(--green-soft); font-size: .82rem; color: var(--text-secondary); }
+.products-count { text-align: center; font-size: .82rem; color: var(--text-secondary); margin: -20px auto 24px; }
+.product-card__body { display: flex; flex-direction: column; height: auto; flex: 1; }
+.product-card { display: flex; flex-direction: column; }
+.product-card.is-hidden { display: none; }
+.product-card__btn { margin-top: auto; }
+.product-card__desc { margin-bottom: 22px; }
+/* Content and static product cards must survive failed/disabled JavaScript. */
+.reveal { opacity: 1; transform: none; }
+.js .reveal:not(.is-visible) { opacity: 0; transform: translateY(20px); }
+@media (prefers-reduced-motion: reduce) {
+ .motion-farm * { animation: none !important; }
+ .js .reveal:not(.is-visible) { opacity: 1; transform: none; }
+}
+@media (max-width:768px) {
+ .motion-farm__caption { padding: 12px 16px; }
+ .film-transcript { padding: 16px; }
+ .film-meta { font-size: .76rem; }
+ .journey-step__image:has(svg) { height: 56px; }
+}

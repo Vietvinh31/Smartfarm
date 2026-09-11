@@ -1,0 +1,1 @@
+{"$schema":"https://openapi.vercel.sh/vercel.json","framework":null,"cleanUrls":false,"headers":[{"source":"/assets/video/(.*).vtt","headers":[{"key":"Content-Type","value":"text/vtt; charset=utf-8"}]}]}

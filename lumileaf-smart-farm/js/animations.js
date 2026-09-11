@@ -184,7 +184,7 @@ export function initGalleryLightbox() {
       <div class="lightbox__overlay"></div>
       <div class="lightbox__content">
         <button class="lightbox__close" aria-label="Đóng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
-        <img src="" alt="">
+        <img alt="">
         <p class="lightbox__caption"></p>
       </div>
     `;
@@ -352,26 +352,15 @@ export function initFarmSteps() {
   const steps = document.querySelectorAll('.farm-step');
   const preview = document.querySelector('.farm-preview img');
   if (!steps.length || !preview) return;
-
+  const select = step => {
+    steps.forEach(item => { item.classList.toggle('is-active', item === step); item.setAttribute('aria-pressed', String(item === step)); });
+    preview.src = step.dataset.image;
+    preview.alt = step.querySelector('h3').textContent + ' trong mô hình nông nghiệp thông minh';
+    document.querySelector('.farm-preview__caption').textContent = step.querySelector('h3').textContent + ' · Hình ảnh minh họa';
+  };
   steps.forEach(step => {
-    step.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        step.click();
-      }
-    });
-    step.addEventListener('click', () => {
-      steps.forEach(s => s.classList.remove('is-active'));
-      step.classList.add('is-active');
-      const img = step.dataset.image;
-      if (img) {
-        preview.style.opacity = '0';
-        setTimeout(() => {
-          preview.src = img;
-          preview.style.opacity = '1';
-        }, 200);
-      }
-    });
+    step.addEventListener('click', () => select(step));
+    step.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select(step); } });
   });
-  steps[0]?.classList.add('is-active');
+  select(steps[0]);
 }

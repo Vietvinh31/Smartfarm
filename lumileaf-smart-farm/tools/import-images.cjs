@@ -1,0 +1,2 @@
+const sharp=require('C:/Users/admin/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');const fs=require('fs');
+(async()=>{const assets=JSON.parse(fs.readFileSync('tools/new-images.json','utf8').replace(/^\uFEFF/,''));for(const a of assets)await sharp(a.path).resize({width:1200,withoutEnlargement:true}).webp({quality:83}).toFile('assets/images/'+a.name+'.webp');console.log('Imported '+assets.length+' distinct images');})();

@@ -5,6 +5,7 @@ import { initNavbar } from './navbar.js';
 import { initAnimations, initSmartFarmDemo, initVideoPlayer, initVideoModal, initFarmSteps, initHeroVideo, initGalleryLightbox } from './animations.js';
 import { initProducts } from './products.js';
 import { initContactForm } from './contact.js';
+import { initMotionIllustrations, initBrandFilm } from './multimedia.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
@@ -17,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryLightbox();
   initProducts();
   initContactForm();
+  initMotionIllustrations();
+  initBrandFilm();
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

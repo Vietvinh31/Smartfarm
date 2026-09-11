@@ -57,7 +57,7 @@ const PRODUCTS = [
     category: 'leafy',
     tag: 'Rau ăn lá',
     desc: 'Xà lách búp bơ mềm mại, giòn ngọt, thu hoạch theo ngày.',
-    image: 'assets/images/hero/greenhouse.webp',
+    image: 'assets/images/lettuce-product.webp',
     features: 'Lá mềm, giòn, màu xanh tươi',
     flavor: 'Ngọt nhẹ, mát',
     usage: 'Rau trộn, món cuốn, bánh mì',
@@ -131,6 +131,8 @@ function initFilter(filterBar) {
         const show = filter === 'all' || card.dataset.category === filter;
         card.classList.toggle('is-hidden', !show);
       });
+      const count = document.querySelector('.products-count');
+      if (count) count.textContent = `${document.querySelectorAll('.product-card:not(.is-hidden)').length} sản phẩm`;
     });
   });
 }
@@ -172,6 +174,7 @@ function openProductModal(modal, product) {
     <div class="product-modal__detail"><strong>Chu kỳ</strong><span>${product.cycle}</span></div>
   `;
 
+  modal._returnFocus = document.activeElement;
   modal.classList.add('is-open');
   modal.setAttribute('aria-hidden', 'false');
   document.body.classList.add('menu-open');
@@ -181,6 +184,7 @@ function openProductModal(modal, product) {
 function closeProductModal(modal) {
   modal.classList.remove('is-open');
   modal.setAttribute('aria-hidden', 'true');
+  modal._returnFocus?.focus();
   document.body.classList.remove('menu-open');
 }
 
