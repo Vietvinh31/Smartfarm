@@ -1,0 +1,58 @@
+[
+  {
+    "route": "/pages/about.html",
+    "words": 812,
+    "height": 6070,
+    "notes": false,
+    "links": true
+  },
+  {
+    "route": "/pages/smart-farm.html",
+    "words": 671,
+    "height": 5489,
+    "notes": false,
+    "links": true
+  },
+  {
+    "route": "/pages/products.html",
+    "words": 805,
+    "height": 7747,
+    "notes": false,
+    "links": true
+  },
+  {
+    "route": "/pages/journey.html",
+    "words": 896,
+    "height": 7845,
+    "notes": false,
+    "links": true
+  },
+  {
+    "route": "/pages/about.html",
+    "words": 812,
+    "height": 3949,
+    "notes": false,
+    "links": true
+  },
+  {
+    "route": "/pages/smart-farm.html",
+    "words": 671,
+    "height": 3776,
+    "notes": false,
+    "links": true
+  },
+  {
+    "route": "/pages/products.html",
+    "words": 805,
+    "height": 4473,
+    "notes": false,
+    "links": true
+  },
+  {
+    "route": "/pages/journey.html",
+    "words": 896,
+    "height": 4117,
+    "notes": false,
+    "links": true
+  }
+]

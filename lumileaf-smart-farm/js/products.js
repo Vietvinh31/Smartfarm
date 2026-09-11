@@ -8,72 +8,72 @@ const PRODUCTS = [
     name: 'Microgreens hỗn hợp',
     category: 'microgreens',
     tag: 'Microgreens',
-    desc: 'Hỗn hợp microgreens đa dạng, giàu dinh dưỡng và hương vị tươi mát.',
+    desc: 'Nhiều sắc lá nhỏ trong cùng một phần rau, vị tươi và kết cấu nhẹ. Phù hợp khi bạn muốn khám phá hương vị đa dạng của microgreens.',
     image: 'assets/images/microgreens.webp',
     features: 'Hỗn hợp các loại microgreens',
     flavor: 'Tươi mát, hơi cay nhẹ, giòn',
     usage: 'Rau trộn, bánh mì, trang trí món ăn',
-    cycle: '7–10 ngày'
+    pairing: 'Món có nhiều kết cấu, phần rau ăn kèm'
   },
   {
     id: 2,
     name: 'Microgreens cải củ đỏ',
     category: 'microgreens',
     tag: 'Microgreens',
-    desc: 'Microgreens cải củ đỏ với màu sắc rực rỡ và vị cay đặc trưng.',
+    desc: 'Thân tím đỏ, lá xanh nhỏ và vị cay nhẹ tạo điểm nhấn dễ nhận ra. Một lựa chọn dành cho người thích món ăn có thêm cá tính.',
     image: 'assets/images/radish.webp',
     features: 'Thân tím đỏ, lá xanh nhỏ',
     flavor: 'Cay nhẹ, giòn, tươi',
     usage: 'Trang trí món ăn, rau trộn, sinh tố',
-    cycle: '6–8 ngày'
+    pairing: 'Nguyên liệu vị thanh để làm nổi bật vị cay của rau'
   },
   {
     id: 3,
     name: 'Microgreens bông cải',
     category: 'microgreens',
     tag: 'Microgreens',
-    desc: 'Mầm bông cải xanh non, được nuôi trong môi trường kiểm soát.',
+    desc: 'Thân mảnh, lá xanh nhỏ, hương vị dịu và hơi đắng nhẹ. Dễ kết hợp cùng những nguyên liệu có vị thanh để giữ nét riêng của rau.',
     image: 'assets/images/broccoli.webp',
     features: 'Thân mảnh, lá nhỏ xanh tươi',
     flavor: 'Nhẹ, hơi đắng, tươi',
     usage: 'Rau trộn, nước ép, ăn kèm',
-    cycle: '8–10 ngày'
+    pairing: 'Món có nước xốt nhẹ, tránh lấn át hương rau'
   },
   {
     id: 4,
     name: 'Cải xoăn xanh',
     category: 'leafy',
     tag: 'Rau ăn lá',
-    desc: 'Cải xoăn xanh non, mềm và giàu chất xơ, vitamin K.',
+    desc: 'Lá xanh có viền xoăn và kết cấu rõ, mang vị rau đậm. Thích hợp để cắt nhỏ, kết hợp trong món xào hoặc các món rau theo khẩu vị.',
     image: 'assets/images/kale.webp',
-    features: 'Lá non mềm, không sần',
+    features: 'Lá xanh, viền xoăn, kết cấu rõ',
     flavor: 'Đậm vị rau, hơi ngọt',
     usage: 'Rau trộn, sinh tố, xào nhanh',
-    cycle: '14–18 ngày'
+    pairing: 'Món xào cùng nấm hoặc các loại rau theo mùa'
   },
   {
     id: 5,
     name: 'Xà lách búp bơ',
     category: 'leafy',
     tag: 'Rau ăn lá',
-    desc: 'Xà lách búp bơ mềm mại, giòn ngọt, thu hoạch theo ngày.',
+    desc: 'Các lớp lá mềm ôm thành búp, vị thanh và giòn mát. Dáng lá thuận tiện cho món cuốn, bánh mì và đĩa rau ăn kèm.',
     image: 'assets/images/lettuce-product.webp',
     features: 'Lá mềm, giòn, màu xanh tươi',
     flavor: 'Ngọt nhẹ, mát',
     usage: 'Rau trộn, món cuốn, bánh mì',
-    cycle: '21–28 ngày'
+    pairing: 'Món cuốn, bánh mì với phần nhân bạn yêu thích'
   },
   {
     id: 6,
     name: 'Rau gia vị hỗn hợp',
     category: 'herbs',
     tag: 'Rau gia vị',
-    desc: 'Hỗn hợp rau thơm tươi: húng quế, mùi tây, rau mùi.',
+    desc: 'Húng quế, mùi tây và rau mùi mang những lớp hương riêng. Thêm từng ít một để tạo điểm nhấn mà vẫn giữ sự cân bằng cho món ăn.',
     image: 'assets/images/herbs.webp',
     features: 'Húng quế, mùi tây và rau mùi',
     flavor: 'Thơm mạnh, tươi sáng',
     usage: 'Nấu ăn, trang trí, đồ uống',
-    cycle: '10–14 ngày'
+    pairing: 'Thêm từng loại theo mùi hương chủ đạo của món'
   }
 ];
 
@@ -171,7 +171,7 @@ function openProductModal(modal, product) {
     <div class="product-modal__detail"><strong>Đặc điểm</strong><span>${product.features}</span></div>
     <div class="product-modal__detail"><strong>Hương vị</strong><span>${product.flavor}</span></div>
     <div class="product-modal__detail"><strong>Ứng dụng</strong><span>${product.usage}</span></div>
-    <div class="product-modal__detail"><strong>Chu kỳ</strong><span>${product.cycle}</span></div>
+    <div class="product-modal__detail"><strong>Gợi ý kết hợp</strong><span>${product.pairing}</span></div>
   `;
 
   modal._returnFocus = document.activeElement;

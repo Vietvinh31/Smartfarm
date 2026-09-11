@@ -9,7 +9,7 @@ export function initContactForm() {
     e.preventDefault();
     if (!validateForm(form)) return;
 
-    showToast('Thông tin hợp lệ. Biểu mẫu minh họa chưa gửi dữ liệu; vui lòng liên hệ nhom4@smartfarm.vn.');
+    showToast('Thông tin hợp lệ. Chưa gửi dữ liệu; vui lòng liên hệ nhom4@smartfarm.vn.');
     clearErrors(form);
   });
 

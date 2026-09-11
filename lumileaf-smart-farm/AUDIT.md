@@ -22,3 +22,13 @@ Bằng chứng: `docs/audit/local-final.json`, `interaction-extra.json`, `video-
 Production: đã kiểm tra https://uomxanhsf.vercel.app, sáu route hoạt động, sản phẩm hiển thị. Bản live chưa có video; thay đổi lần này chưa được push/deploy. Báo cáo `docs/audit/production-before.json` là bản live, không phải xác nhận triển khai các thay đổi local.
 
 Giới hạn: chưa thử Safari/iOS hoặc thiết bị thật; toàn màn hình dựa trên khả năng trình duyệt. Form là demo kiểm tra dữ liệu, không gửi hoặc lưu dữ liệu. Video là montage ảnh có nhạc nền, không có lời đọc. Ảnh AI và số liệu Smart Farm được ghi rõ là minh họa. Nguồn ảnh và giấy phép tại `docs/MEDIA-SOURCES.md`.
+
+## Cập nhật nội dung chuyên sâu — 11/09/2026
+
+Bốn trang Câu chuyện, Smart Farm, Sản phẩm và Hành trình xanh đã được phát triển theo từng mạch đọc riêng. `css/editorial.css` dùng bố cục chương, dòng chữ có độ dài vừa phải, thẻ nội dung, FAQ gốc HTML và điều hướng neo. Không bổ sung framework hoặc ảnh trùng.
+
+Đã bỏ các nhãn hình ảnh minh họa/mô phỏng và ghi chú nguồn ảnh trên giao diện theo yêu cầu; thông tin nguồn vẫn được lưu trong docs. Thay các giá trị cảm biến ngẫu nhiên bằng nội dung giải thích, tránh trình bày như dữ liệu đang đo thực tế. Form giữ thông báo chưa hỗ trợ gửi trực tuyến để không báo gửi thành công giả. Copyright theo yêu cầu ban đầu được giữ.
+
+Mô tả sản phẩm trong HTML và modal được đồng bộ; chi tiết gợi ý kết hợp thay cho chu kỳ trồng cố định. Không thêm chứng nhận, lịch sử doanh nghiệp hoặc thành tích chưa được cung cấp.
+
+Đã chụp và xem bốn trang desktop, tạo thêm bốn ảnh chụp mobile tại `docs/audit/editorial-*.png`. `docs/audit/editorial.json` ghi nhận đường dẫn neo hợp lệ và không còn cụm “minh họa/mô phỏng” trong nội dung bốn trang. Các kiểm tra local vẫn được lưu trong `local-final.json`. Chưa triển khai cập nhật lên Vercel.

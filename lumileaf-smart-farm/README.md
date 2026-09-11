@@ -62,3 +62,7 @@ Chủ thể của từng prompt:
 Giữ Root Directory hiện có là `lumileaf-smart-farm`, framework Other, không cần lệnh build. Các route `.html` giữ nguyên. `vercel.json` đặt MIME cho VTT. Toàn bộ ảnh, font, MP4 và VTT phục vụ từ cùng origin.
 
 Đã kiểm tra bản đang chạy tại https://uomxanhsf.vercel.app: sáu route hoạt động, sáu sản phẩm xuất hiện, chưa có video. Các chỉnh sửa lần này nằm ở local, chưa push hoặc triển khai. Sau khi triển khai, kiểm tra lại video nhận metadata 28 giây, source MP4 và track VTT trả 200/206; dùng `tools/production-check.cjs` để kiểm tra route.
+
+## Nội dung chuyên sâu
+
+Bốn trang nội dung dùng thêm `css/editorial.css`: câu chuyện thương hiệu, cách vận hành Smart Farm, chọn rau theo bữa ăn và hành trình sáu bước. FAQ sử dụng details/summary nên hoạt động không cần JavaScript. Nhãn minh họa được bỏ khỏi UI theo yêu cầu; nguồn ảnh vẫn ở docs. Các số liệu cảm biến ngẫu nhiên không còn được hiển thị; mô tả sản phẩm đã được cập nhật cùng HTML tĩnh.

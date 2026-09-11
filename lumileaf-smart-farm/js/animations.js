@@ -356,7 +356,7 @@ export function initFarmSteps() {
     steps.forEach(item => { item.classList.toggle('is-active', item === step); item.setAttribute('aria-pressed', String(item === step)); });
     preview.src = step.dataset.image;
     preview.alt = step.querySelector('h3').textContent + ' trong mô hình nông nghiệp thông minh';
-    document.querySelector('.farm-preview__caption').textContent = step.querySelector('h3').textContent + ' · Hình ảnh minh họa';
+    document.querySelector('.farm-preview__caption').textContent = step.querySelector('h3').textContent;
   };
   steps.forEach(step => {
     step.addEventListener('click', () => select(step));
