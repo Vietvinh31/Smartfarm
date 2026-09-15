@@ -1,0 +1,416 @@
+[
+  {
+    "width": 360,
+    "route": "",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 360,
+    "route": "pages/about.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 360,
+    "route": "pages/smart-farm.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 360,
+    "route": "pages/products.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 360,
+    "route": "pages/journey.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 360,
+    "route": "pages/contact.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 390,
+    "route": "",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 390,
+    "route": "pages/about.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 390,
+    "route": "pages/smart-farm.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 390,
+    "route": "pages/products.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 390,
+    "route": "pages/journey.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 390,
+    "route": "pages/contact.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 165,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 1440,
+    "route": "",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 1440,
+    "route": "pages/about.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 1440,
+    "route": "pages/smart-farm.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 1440,
+    "route": "pages/products.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 1440,
+    "route": "pages/journey.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  },
+  {
+    "width": 1440,
+    "route": "pages/contact.html",
+    "overflow": false,
+    "logos": [
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      },
+      {
+        "src": "../assets/logo/uom-xanh-horizontal.svg",
+        "width": 210,
+        "loaded": true
+      }
+    ],
+    "old": 0
+  }
+]

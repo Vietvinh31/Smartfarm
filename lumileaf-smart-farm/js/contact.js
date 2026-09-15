@@ -1,9 +1,25 @@
+import { PRODUCTS } from './product-data.js';
 /**
  * Ươm Xanh Smart Farm - Contact Form Module
  */
 export function initContactForm() {
   const form = document.querySelector('#contact-form');
   if (!form) return;
+  const topic = form.querySelector('#product-topic');
+  if (topic) {
+    PRODUCTS.forEach(product => topic.add(new Option(product.name, String(product.id))));
+    const id = new URLSearchParams(location.search).get('product');
+    if (PRODUCTS.some(product => String(product.id) === id)) topic.value = id;
+    const updateEmail = () => {
+      const name = topic.selectedOptions[0].textContent;
+      const subject = 'Tư vấn Ươm Xanh – ' + name;
+      const body = 'Sản phẩm: ' + name + '\nHọ tên: ' + form.elements.name.value + '\nĐiện thoại: ' + form.elements.phone.value + '\nNhu cầu: ' + form.elements.message.value;
+      form.querySelector('#consult-email').href = 'mailto:nhom4@smartfarm.vn?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    };
+    form.addEventListener('input', updateEmail);
+    topic.addEventListener('change', updateEmail);
+    updateEmail();
+  }
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -55,6 +71,8 @@ function validateField(field) {
     if (!phoneRegex.test(cleaned)) message = 'Số điện thoại không hợp lệ.';
   }
 
+  field.setAttribute('aria-invalid', String(Boolean(message)));
+  if (errorEl && field.id) { errorEl.id = `${field.id}-error`; field.setAttribute('aria-describedby', errorEl.id); }
   if (message) {
     group?.classList.add('is-error');
     if (errorEl) errorEl.textContent = message;

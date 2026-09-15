@@ -1,0 +1,25 @@
+{
+  "stages": [
+    [
+      "01 · Hạt giống bắt đầu hành trình"
+    ],
+    [
+      "02 · Nảy mầm, rễ và thân vươn dài"
+    ],
+    [
+      "03 · Hai chiếc lá mở ra"
+    ],
+    [
+      "04 · Cảm biến theo dõi cây"
+    ],
+    [
+      "05 · Sẵn sàng thu hoạch"
+    ]
+  ],
+  "viewport360": true,
+  "pauseMouse": true,
+  "resumeKeyboard": true,
+  "offscreen": true,
+  "reducedMotion": true,
+  "noJavaScript": true
+}

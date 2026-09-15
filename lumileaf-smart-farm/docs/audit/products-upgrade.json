@@ -1,0 +1,14 @@
+{
+  "products": 10,
+  "filters": [
+    4,
+    3,
+    3
+  ],
+  "focusTrap": true,
+  "focusReturn": true,
+  "closeMethods": 3,
+  "contactPrefill": true,
+  "mailto": true,
+  "errors": []
+}

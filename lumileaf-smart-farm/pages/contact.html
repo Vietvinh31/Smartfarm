@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Liên hệ Ươm Xanh – Nông nghiệp thông minh - Let's Grow Together.">
+  <meta name="description" content="Đăng ký nhận tư vấn về microgreens, rau ăn lá, rau gia vị và mô hình Smart Farm qua email hoặc điện thoại.">
   <title>Liên hệ | Ươm Xanh – Nông nghiệp thông minh</title>
-  <link rel="icon" href="../assets/logo/two-leaves.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/logo/uom-xanh-favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../css/fonts.css">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/variables.css">
@@ -20,11 +20,7 @@
   <header class="header" role="banner">
     <div class="container header__inner">
       <a href="../index.html" class="nav__logo" aria-label="Ươm Xanh - Trang chủ">
-        <div class="brand-icon"><img src="../assets/logo/two-leaves.svg" alt="" width="54" height="40"></div>
-        <div class="brand-logo">
-          <div class="brand-logo__main">Ươm Xanh</div>
-          <div class="brand-logo__sub">Nông nghiệp thông minh</div>
-        </div>
+        <img class="brand-lockup" src="../assets/logo/uom-xanh-horizontal.svg" alt="Ươm Xanh – Nông nghiệp thông minh" width="580" height="140">
       </a>
       <nav class="nav__menu" aria-label="Điều hướng chính">
         <ul class="nav__links">
@@ -35,7 +31,7 @@
           <li><a href="journey.html" class="nav__link">Hành trình xanh</a></li>
           <li><a href="contact.html" class="nav__link">Liên hệ</a></li>
         </ul>
-        <a href="smart-farm.html" class="btn btn--primary nav__cta">Khám phá nông trại</a>
+        <a href="products.html" class="btn btn--primary nav__cta">Khám phá sản phẩm</a>
       </nav>
       <button class="nav__toggle" aria-label="Mở menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -47,11 +43,7 @@
     <div class="mobile-nav__overlay"></div>
     <nav class="mobile-nav__panel" aria-label="Menu di động">
 <a href="../index.html" class="nav__logo" aria-label="Ươm Xanh - Trang chủ">
-        <div class="brand-icon"><img src="../assets/logo/two-leaves.svg" alt="" width="54" height="40"></div>
-        <div class="brand-logo">
-          <div class="brand-logo__main">Ươm Xanh</div>
-          <div class="brand-logo__sub">Nông nghiệp thông minh</div>
-        </div>
+        <img class="brand-lockup" src="../assets/logo/uom-xanh-horizontal.svg" alt="Ươm Xanh – Nông nghiệp thông minh" width="580" height="140">
       </a>
       <a href="../index.html" class="mobile-nav__link">Trang chủ</a>
       <a href="about.html" class="mobile-nav__link">Câu chuyện</a>
@@ -59,7 +51,7 @@
       <a href="products.html" class="mobile-nav__link">Sản phẩm</a>
       <a href="journey.html" class="mobile-nav__link">Hành trình xanh</a>
       <a href="contact.html" class="mobile-nav__link">Liên hệ</a>
-      <a href="smart-farm.html" class="btn btn--primary mobile-nav__cta">Khám phá nông trại</a>
+      <a href="products.html" class="btn btn--primary mobile-nav__cta">Khám phá sản phẩm</a>
     </nav>
   </div>
 
@@ -104,6 +96,7 @@
           </div>
 
           <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate>
+<div class="form-group"><label for="product-topic">Sản phẩm cần tư vấn</label><select id="product-topic" name="product"><option value="">Tư vấn chung</option></select></div>
             <div class="form-group">
               <label for="name">Họ và tên *</label>
               <input type="text" id="name" name="name" required placeholder="Nguyễn Văn A">
@@ -124,8 +117,8 @@
               <textarea id="message" name="message" required placeholder="Nội dung tin nhắn..."></textarea>
               <span class="form-group__error">Vui lòng nhập nội dung.</span>
             </div>
-<p class="form-note">Liên hệ trực tiếp qua email hoặc điện thoại để được phản hồi. Biểu mẫu này chưa hỗ trợ gửi trực tuyến.</p>
-            <button type="submit" class="btn btn--primary product-card__btn">Kiểm tra thông tin</button>
+<p class="form-note">Liên hệ trực tiếp qua email hoặc điện thoại để được phản hồi. Biểu mẫu này chưa hỗ trợ gửi trực tuyến; để đăng ký tư vấn, hãy gửi nhu cầu qua email hoặc gọi số bên cạnh.</p>
+            <button type="submit" class="btn btn--primary product-card__btn">Kiểm tra thông tin</button><a class="btn btn--secondary" id="consult-email" href="mailto:nhom4@smartfarm.vn">Soạn email tư vấn</a><p class="form-note">Nút soạn email mở ứng dụng thư của bạn; bạn xem lại nội dung và tự gửi.</p>
           </form>
         </div>
       </div>
@@ -136,17 +129,13 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="../index.html" class="nav__logo" aria-label="Trang chủ" style="margin-bottom: 24px; color: var(--white);">
-            <div class="brand-icon"><img src="../assets/logo/two-leaves.svg" alt="" width="54" height="40"></div>
-            <div class="brand-logo">
-              <div class="brand-logo__main">Ươm Xanh</div>
-              <div class="brand-logo__sub">Nông nghiệp thông minh</div>
-            </div>
+          <a href="../index.html" class="nav__logo" aria-label="Ươm Xanh – Trang chủ" style="margin-bottom: 24px; color: var(--white);">
+            <img class="brand-lockup" src="../assets/logo/uom-xanh-horizontal.svg" alt="Ươm Xanh – Nông nghiệp thông minh" width="580" height="140">
           </a>
-          <p class="footer__desc">Rau sạch được nuôi dưỡng bởi công nghệ, từ hạt giống đến bàn ăn.</p>
+          <p class="footer__desc">Microgreens, rau ăn lá và rau gia vị ứng dụng mô hình Smart Farm.</p>
         </div>
         <div>
-          <h4 class="footer__title">Khám phá</h4>
+          <h2 class="footer__title">Khám phá</h2>
           <ul class="footer__links">
             <li><a href="../index.html">Trang chủ</a></li>
             <li><a href="about.html">Câu chuyện</a></li>
@@ -156,7 +145,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="footer__title">Liên hệ</h4>
+          <h2 class="footer__title">Liên hệ</h2>
           <ul class="footer__links">
             <li>55 Giải Phóng, Bạch Mai, Hà Nội</li>
             <li><a href="mailto:nhom4@smartfarm.vn">nhom4@smartfarm.vn</a></li>
@@ -164,7 +153,7 @@
           </ul>
         </div>
         <div>
-          <h4 class="footer__title">Kết nối</h4>
+          <h2 class="footer__title">Kết nối</h2>
           <div class="footer__social" role="group" aria-label="Kênh mạng xã hội đang cập nhật">
             <span aria-label="Facebook (chưa cập nhật)" title="Facebook — chưa cập nhật"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
             <span aria-label="Instagram (chưa cập nhật)" title="Instagram — chưa cập nhật"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></span>

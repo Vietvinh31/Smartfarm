@@ -14,3 +14,17 @@ Gallery lưu local, không hotlink; sử dụng theo [giấy phép Pexels](https
 6. [Rau trộn – cottonbro studio](https://www.pexels.com/photo/photo-of-vegetable-salad-in-a-bowl-3298060/)
 
 Video sử dụng ảnh minh họa của dự án, nhạc nền tổng hợp nguyên bản bởi `tools/build-film.py` và phụ đề tiếng Việt. Không dùng nhạc có bản quyền của bên khác. Minh họa chuyển động tưới cây được viết bằng SVG/CSS trong HTML, không phải logo.
+
+## Ảnh sản phẩm bổ sung — giai đoạn 4
+
+Tạo bằng công cụ imagegen tích hợp, không dùng ảnh của thương hiệu khác. Chuyển sang WebP 1200 × 900 để dùng trên website. Đây là ảnh tổng hợp cho thương hiệu giả định.
+
+Các file: `assets/images/pea-shoots.webp`, `romaine.webp`, `basil.webp`, `mint.webp`.
+
+Prompt chung: Product photography for a Vietnamese fresh vegetable brand. {subject}, on a cream ceramic plate, pale cream tabletop, soft daylight, green and warm cream palette, clean editorial closeup, landscape 4:3, centered entire vegetable visible, no text, no logo, no watermark, no other vegetable species.
+
+Subjects lần lượt:
+- Fresh young pea shoots with curled tendrils
+- One romaine lettuce head with upright elongated ribbed leaves
+- Fresh sweet basil sprigs with smooth oval green leaves
+- Fresh mint sprigs with serrated textured leaves

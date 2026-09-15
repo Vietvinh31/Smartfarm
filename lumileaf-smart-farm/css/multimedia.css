@@ -55,3 +55,68 @@
  .journey-step__image:has(svg) { height: 56px; }
 }
 .metric-card__explanation { font-size:.95rem; line-height:1.6; color:var(--green-dark); margin-top:14px; }
+/* A shared nine-second CSS timeline keeps drawing and status synchronized. */
+.growth-heading { padding:24px 24px 0; }
+.growth-heading h3 { font-size:1.12rem; line-height:1.5; color:var(--green-dark); }
+.growth-farm svg { display:block; }
+.growth-farm .motion-farm__caption { align-items:flex-start; }
+.growth-farm .motion-farm__caption p { line-height:1.8; }
+.growth-farm [data-motion-toggle] { min-height:44px; padding:8px 12px; border:1px solid var(--green-main); border-radius:24px; text-decoration:none; color:var(--green-dark); }
+.growth-farm [data-motion-toggle]:focus-visible { outline:3px solid var(--green-main); outline-offset:4px; }
+.growth-status { position:relative; min-height:48px; margin:0 24px; color:var(--green-dark); font-size:.9rem; font-weight:600; }
+.growth-status span { display:block; position:absolute; inset:0; opacity:0; }
+.growth-status span:last-child { opacity:1; }
+.growth-roots { transform-origin:280px 240px; }
+.growth-stem { transform-origin:280px 233px; }
+.growth-leaves { transform-origin:280px 193px; }
+.growth-signal { transform-origin:426px 213px; }
+.growth-seed { transform-origin:280px 237px; }
+.growth-farm.motion-ready .growth-seed { animation:seed-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-roots { animation:root-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-stem { animation:stem-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-leaves { animation:leaf-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-flow { animation:flow-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-drops { animation:drop-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-signal { animation:signal-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-led { animation:led-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-harvest { animation:harvest-cycle 9s linear infinite; }
+.growth-farm.motion-ready .growth-status span { animation:status-one 9s step-end infinite; }
+.growth-farm.motion-ready .growth-status span:nth-child(2) { animation-name:status-two; }
+.growth-farm.motion-ready .growth-status span:nth-child(3) { animation-name:status-three; }
+.growth-farm.motion-ready .growth-status span:nth-child(4) { animation-name:status-four; }
+.growth-farm.motion-ready .growth-status span:nth-child(5) { animation-name:status-five; }
+@keyframes seed-cycle { 0%,100%{opacity:0;transform:scale(.5)} 6%,94%{opacity:1;transform:scale(1)} }
+@keyframes root-cycle { 0%,17%,100%{transform:scaleY(0);opacity:0} 34%,94%{transform:scaleY(1);opacity:1} }
+@keyframes stem-cycle { 0%,24%,100%{transform:scaleY(0);opacity:0} 42%,94%{transform:scaleY(1);opacity:1} }
+@keyframes leaf-cycle { 0%,39%,100%{transform:scale(.05);opacity:0} 58%,94%{transform:scale(1);opacity:1} }
+@keyframes flow-cycle { 0%{stroke-dashoffset:0} 100%{stroke-dashoffset:-126} }
+@keyframes drop-cycle { 0%,26%,51%,76%,100%{transform:translateY(0);opacity:0} 8%,33%,58%,83%{opacity:.8} 24%,49%,74%,98%{transform:translateY(44px);opacity:0} }
+@keyframes signal-cycle { 0%,59%,78%,100%{transform:scale(.7);opacity:0} 62%,81%{opacity:.7} 76%,95%{transform:scale(1.65);opacity:0} }
+@keyframes led-cycle { 0%,100%{opacity:.12} 40%,80%{opacity:.45} }
+@keyframes harvest-cycle { 0%,79%,100%{opacity:0} 84%,94%{opacity:1} }
+@keyframes status-one { 0%{opacity:1} 20%{opacity:0} }
+@keyframes status-two { 0%{opacity:0} 20%{opacity:1} 40%{opacity:0} }
+@keyframes status-three { 0%{opacity:0} 40%{opacity:1} 60%{opacity:0} }
+@keyframes status-four { 0%{opacity:0} 60%{opacity:1} 80%{opacity:0} }
+@keyframes status-five { 0%{opacity:0} 80%{opacity:1} }
+@media(prefers-reduced-motion:reduce) { .growth-farm.motion-ready * { animation:none!important; } .growth-status span { opacity:0!important; } .growth-status span:last-child { opacity:1!important; } }
+@media(max-width:400px) { .growth-heading { padding:20px 16px 0; } .growth-status { margin-inline:16px; font-size:.82rem; } }
+/* Product details and consultation: stable image boxes, readable mobile dialog. */
+.product-card__image { aspect-ratio:4/3; }
+.product-card__image img { width:100%; height:100%; object-fit:cover; }
+.product-card__flavor { color:var(--text-secondary); font-size:.85rem; line-height:1.7; margin-bottom:20px; }
+.product-card__actions { display:grid; gap:10px; margin-top:auto; }
+.product-card__actions .btn { width:100%; padding-inline:12px; font-size:.84rem; }
+#product-modal .modal__content { max-height:90dvh; overflow-y:auto; overscroll-behavior:contain; }
+#product-modal .modal__close { position:sticky; top:12px; margin:12px 12px 0 auto; display:flex; z-index:2; background:var(--white); border:1px solid var(--border); }
+.product-modal__layout { align-items:start; }
+.product-modal__image img { width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
+.product-modal__detail span { overflow-wrap:anywhere; line-height:1.7; }
+.product-modal__consult { margin-top:20px; }
+#product-topic { width:100%; padding:14px; border:1px solid var(--border); border-radius:12px; background:var(--white); color:var(--text-main); font:inherit; }
+#contact-form { scroll-margin-top:100px; }
+#consult-email { margin-top:12px; }
+#product-modal :focus-visible { outline:3px solid var(--green-main); outline-offset:3px; }
+@media(max-width:600px) { #product-modal .product-modal__layout { display:grid; grid-template-columns:1fr; gap:20px; padding:16px; } #product-modal .product-modal__info { padding:0; } #product-modal .product-modal__image img { max-height:180px; } #product-modal .product-modal__detail { display:grid; grid-template-columns:1fr; gap:5px; } }
+
+#product-modal .product-modal__image img { min-height: 0; }

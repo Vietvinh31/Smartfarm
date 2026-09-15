@@ -66,3 +66,26 @@ Giữ Root Directory hiện có là `lumileaf-smart-farm`, framework Other, khô
 ## Nội dung chuyên sâu
 
 Bốn trang nội dung dùng thêm `css/editorial.css`: câu chuyện thương hiệu, cách vận hành Smart Farm, chọn rau theo bữa ăn và hành trình sáu bước. FAQ sử dụng details/summary nên hoạt động không cần JavaScript. Nhãn minh họa được bỏ khỏi UI theo yêu cầu; nguồn ảnh vẫn ở docs. Các số liệu cảm biến ngẫu nhiên không còn được hiển thị; mô tả sản phẩm đã được cập nhật cùng HTML tĩnh.
+
+
+## Hệ thống logo vector — 15/09/2026
+
+Logo hiện hành: `assets/logo/uom-xanh-horizontal.svg`; bản đầy đủ `uom-xanh-full.svg`, bản trắng `uom-xanh-mono.svg`, biểu tượng `uom-xanh-icon.svg`, favicon `uom-xanh-favicon.svg`. Thay thế bộ two-leaves nhúng raster được mô tả trong lịch sử phía trên. Chữ chính và tagline đều dựng bằng path riêng, không dùng font hoặc ảnh nhúng. Mã nguồn dựng: `tools/build-logo.py`. Hồ sơ thiết kế: `docs/logo-design.html`. Header/mobile/footer và cảnh đầu/cuối video đã đồng bộ; không deploy.
+
+## Giai đoạn 4 — Danh mục sản phẩm
+
+Danh mục gồm 10 sản phẩm, được biên soạn tại `js/product-data.js`. Mỗi mục có tên, nhóm, mô tả, ảnh riêng, đặc điểm, hương vị/kết cấu, gợi ý món ăn, kết hợp, quy cách dự kiến và bảo quản chung.
+
+Sau khi sửa dữ liệu chạy `node tools/sync-products.mjs` để đồng bộ HTML trang chủ và Sản phẩm. Commit cả dữ liệu lẫn HTML được sinh; Vercel tiếp tục phục vụ website tĩnh, không cần backend hoặc thư viện mới. HTML tĩnh giữ danh mục đọc được khi tắt JavaScript.
+
+Chi tiết dùng modal có focus trap, Escape, overlay và khôi phục focus. CTA truyền ID sản phẩm sang Liên hệ; danh sách lựa chọn cũng lấy từ cùng nguồn dữ liệu. Nút soạn email chỉ mở ứng dụng thư, không tự gửi và không có dịch vụ nhận form phía server.
+
+Kiểm tra: `node tools/products-check.cjs`; kiểm tra hồi quy website: `node tools/audit.cjs`.
+
+## Giai đoạn 5 — Truy xuất lô mẫu
+
+Trang `pages/traceability.html?lot=UX-260915-01` chứa hồ sơ tĩnh và timeline 6 bước. Toàn bộ là dữ liệu mô phỏng phục vụ dự án học tập. JS chỉ kiểm tra mã lô; mã khác hiển thị không tìm thấy. Không JS: hiển thị lô mẫu cố định kèm chú thích, không có tra cứu thực.
+
+QR tại `assets/qr/UX-260915-01.svg` trỏ tới https://uomxanhsf.vercel.app/pages/traceability.html?lot=UX-260915-01. Không có CDN hoặc thư viện QR phía trình duyệt. Công cụ Python qrcode 8.2 dùng ở bước tạo ảnh, zxing-cpp 2.3.0 + Pillow 11.3.0 dùng giải mã kiểm chứng; các gói nằm trong tools/.qr-deps (gitignore), không triển khai. Sinh lại QR: cài các gói vào tools/.qr-deps rồi chạy `python tools/build-trace.py`. Nếu đổi tên miền, cập nhật URL trong script và liên kết văn bản của trang trước khi sinh lại.
+
+Kiểm tra `node tools/trace-check.cjs`: timeline 6 bước, link từ Sản phẩm/Hành trình, mã lô sai, 360/1440 px, không overflow và không JS/HTTP error. QR đã giải mã đúng URL; việc truy cập trang production cần triển khai phiên bản này. Chưa deploy.

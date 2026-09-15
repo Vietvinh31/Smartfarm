@@ -1,0 +1,232 @@
+{
+  "results": [
+    {
+      "width": 360,
+      "route": "",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 360,
+      "route": "pages/about.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 360,
+      "route": "pages/smart-farm.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 360,
+      "route": "pages/products.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 360,
+      "route": "pages/journey.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 360,
+      "route": "pages/contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 360,
+      "route": "pages/traceability.html?lot=UX-260915-01",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "pages/about.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "pages/smart-farm.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "pages/products.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "pages/journey.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "pages/contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 390,
+      "route": "pages/traceability.html?lot=UX-260915-01",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "pages/about.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "pages/smart-farm.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "pages/products.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "pages/journey.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "pages/contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 768,
+      "route": "pages/traceability.html?lot=UX-260915-01",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "pages/about.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "pages/smart-farm.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "pages/products.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "pages/journey.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "pages/contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1024,
+      "route": "pages/traceability.html?lot=UX-260915-01",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "pages/about.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "pages/smart-farm.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "pages/products.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "pages/journey.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "pages/contact.html",
+      "overflow": false,
+      "broken": []
+    },
+    {
+      "width": 1440,
+      "route": "pages/traceability.html?lot=UX-260915-01",
+      "overflow": false,
+      "broken": []
+    }
+  ],
+  "film": {
+    "duration": 71.146009,
+    "time": 1.163,
+    "muted": false,
+    "volume": 1,
+    "tracks": 0,
+    "controls": true
+  },
+  "errors": [],
+  "checks": [
+    "filter",
+    "product modal",
+    "farm preview",
+    "motion pause",
+    "video playback/captions/seek",
+    "gallery lightbox",
+    "no-JS products"
+  ]
+}

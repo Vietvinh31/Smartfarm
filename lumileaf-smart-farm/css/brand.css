@@ -170,3 +170,7 @@ h1, h2, h3, h4 { font-weight: 650; }
  .page-hero { min-height: 210px; padding-block: 44px; }
  .filter-chip { padding: 10px 14px; font-size: .8rem; }
 }
+/* Vector lockup dimensions reserve space before image loading. */
+.nav__logo .brand-lockup { display:block; width:210px; height:auto; aspect-ratio:580/140; max-width:100%; flex-shrink:0; }
+.nav__logo { flex-shrink:0; }
+@media(max-width:768px) { .nav__logo .brand-lockup { width:165px; } }
